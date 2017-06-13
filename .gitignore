@@ -1,0 +1,7 @@
+.ruby-env
+.ruby-gemset
+.ruby-version
+.gitignore
+.npmignore
+.DS_STORE
+*.swp
