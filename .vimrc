@@ -33,6 +33,8 @@ syntax on
 autocmd vimenter * NERDTree | wincmd p
 let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeMapActivateNode='<right>'          " open nerdtree node with right key
+let NERDTreeMouseMode=3                        " navigate nerdtree with single click
+let NERDTreeShowHidden=1                       " show hidden files
 let g:gitgutter_sign_column_always=1           " always show git gutter
 let g:airline_powerline_fonts = 1
 let g:ctrlp_map = '<c-p>'
