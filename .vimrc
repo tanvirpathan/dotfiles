@@ -29,18 +29,28 @@ set hidden
 set history=100     " store info in memory for speed
 
 " Colors and Fonts
+set term=screen-256color
+set t_Co=256
 syntax on
+colorscheme minimalist
+set background=dark
+
 autocmd vimenter * NERDTree | wincmd p
 let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeMapActivateNode='<right>'          " open nerdtree node with right key
 let NERDTreeMouseMode=3                        " navigate nerdtree with single click
-let NERDTreeShowHidden=1                       " show hidden files
+" let NERDTreeShowHidden=1                       " show hidden files
 let g:gitgutter_sign_column_always=1           " always show git gutter
 let g:airline_powerline_fonts = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=80
-let g:airline_theme='term'
-let g:SuperTabDefaultCompletionType = "<c-n>"
+" let g:airline_theme='term'
 
+ let g:airline_theme='onedark'
+ let g:airline_powerline_fonts = 1
+ let g:airline#extensions#tabline#enabled = 1
+
+let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:enable_bold_font = 1
