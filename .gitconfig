@@ -1,0 +1,14 @@
+[user]
+	email = dillionverma@hotmail.com
+	name = Dillion Verma
+[core]
+	excludesfile = ~/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[push]
+	default = tracking
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[alias]
+  ls = !"git ls1"
+  ls1 = !"git ls1-specific --all"
+  ls1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'

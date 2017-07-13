@@ -88,11 +88,18 @@ source ~/.bin/tmuxinator.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias m="mitre"
 alias git=hub
+alias cb="git rev-parse --abbrev-ref HEAD | pbcopy"
+alias connect="sudo openconnect vpn.networkspike.com --no-dtls --servercert sha256:4410a9cb49c5a6c9366a22f54267340f944b8325b20a77213cfb4a61f21444ac -u kamal"
 
 export EDITOR='vim'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export GOPATH=~/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$GOBIN
+
 export PATH=$HOME/bin:mongodb/bin:$PATH
 export MITRE_GEM_SERVER_USERNAME=mitremedia
 export MITRE_GEM_SERVER_PASSWORD=d0notenter
@@ -108,10 +115,13 @@ export MYSQL_PASSWORD=d0notenter
 export TIKKANEN_DIR=$HOME/Documents/mitre/tikkanen
 export SATHER_CORE_DIR=$HOME/Documents/mitre/sather_core
 
+[[ -s "/Users/dillionverma/.gvm/scripts/gvm" ]] && source "/Users/dillionverma/.gvm/scripts/gvm"
+
+export PYTHONPATH=$PYTHONPATH:/usr/local/bin/
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/dillionverma/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/dillionverma/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/dillionverma/Documents/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/dillionverma/Documents/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/dillionverma/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/dillionverma/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-[[ -s "/Users/dillionverma/.gvm/scripts/gvm" ]] && source "/Users/dillionverma/.gvm/scripts/gvm"
+if [ -f '/Users/dillionverma/Documents/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/dillionverma/Documents/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/opencv3/bin:$PATH"
