@@ -1,4 +1,30 @@
+" Make vim useful.
+set nocompatible
+set number
+filetype plugin indent on
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'dikiaap/minimalist'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'airblade/vim-gitgutter'
+call vundle#end()
+
+" " Brief help
+" " :PluginList       - lists configured plugins
+" " :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" " :PluginClean      - confirms removal of unused plugins; append `!` to
+
 map <SPACE> <leader>
+
 map <leader>s :source ~/.vimrc<CR>
 vmap <C-c> :w !pbcopy<CR>
 
@@ -22,12 +48,7 @@ nnoremap <space>gpl :Dispatch! git pull<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <C-x> :bdelete<CR>
-execute pathogen#infect()
 
-" Make vim useful.
-set nocompatible
-set number
-filetype plugin indent on
 
 " Configuration
 set autoread " Set to auto read when a file is changed from the outside
