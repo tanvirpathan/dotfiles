@@ -90,6 +90,7 @@ alias m="mitre"
 alias git=hub
 alias cb="git rev-parse --abbrev-ref HEAD | pbcopy"
 alias connect="sudo openconnect vpn.networkspike.com --no-dtls --servercert sha256:4410a9cb49c5a6c9366a22f54267340f944b8325b20a77213cfb4a61f21444ac -u kamal"
+alias materialize="open ~/websites/materialize/index.html"
 
 export EDITOR='vim'
 export NVM_DIR="$HOME/.nvm"

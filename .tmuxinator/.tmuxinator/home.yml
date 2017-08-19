@@ -1,0 +1,62 @@
+# ~/.tmuxinator/home.yml
+
+name: home
+root: ~/Documents/dillion
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: editor
+
+# Specitifes (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# startup_pane: 1
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t home
+
+windows:
+  - welcome:
+      layout: c4bb,272x66,0,0{214x66,0,0,5,57x66,215,0[57x32,215,0,7,57x33,215,33,8]}
+      panes:
+        - one:
+          - vim
+        - two:
+          - cmatrix
+        - three:
+          - pipes.sh
+  - starspeak:
+      root: ~/Documents/dillion/starspeak
+      layout: c4bb,272x66,0,0{214x66,0,0,5,57x66,215,0[57x32,215,0,7,57x33,215,33,8]}
+      panes:
+        - one:
+            - vim
+        - two:
+            - sh -c 'rm app/assets/webpack/* || true && cd client && bundle exec rake react_on_rails:locale && yarn run build:development'
+        - three:
+            - bundle exec rails s
+  - memesx:
+      root: ~/Documents/dillion/memesx
+      layout: c4bb,272x66,0,0{214x66,0,0,5,57x66,215,0[57x32,215,0,7,57x33,215,33,8]}
+      panes:
+        - one:
+          - vim
+        - two:
+          - ok
+        - three:
+          - bundle exec rails s
