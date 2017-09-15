@@ -86,7 +86,6 @@ source ~/.bin/tmuxinator.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias m="mitre"
 alias git=hub
 alias cb="git rev-parse --abbrev-ref HEAD | pbcopy"
 alias connect="sudo openconnect vpn.networkspike.com --no-dtls --servercert sha256:4410a9cb49c5a6c9366a22f54267340f944b8325b20a77213cfb4a61f21444ac -u kamal"
@@ -102,19 +101,6 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:$GOBIN
 
 export PATH=$HOME/bin:mongodb/bin:$PATH
-export MITRE_GEM_SERVER_USERNAME=mitremedia
-export MITRE_GEM_SERVER_PASSWORD=d0notenter
-export MITRE_WORKSPACE=$HOME/Documents/mitre
-export CHEF_REPO=$HOME/Documents/mitre/chef
-export MITRE_COOKBOOKS=$HOME/Documents/mitre/mitre-cookbooks
-export ETFDB_DBHOST=local.etfdb.com
-export DIVIDEND_DBHOST=local.dividend.com
-export COMMODITYHQ_DBHOST=local.commodityhq.com
-export MUNICIPALBONDS_DBHOST=local.municipalbonds.com
-export MYSQL_USER=mitre
-export MYSQL_PASSWORD=d0notenter
-export TIKKANEN_DIR=$HOME/Documents/mitre/tikkanen
-export SATHER_CORE_DIR=$HOME/Documents/mitre/sather_core
 
 [[ -s "/Users/dillionverma/.gvm/scripts/gvm" ]] && source "/Users/dillionverma/.gvm/scripts/gvm"
 
